@@ -1,11 +1,10 @@
 import sys
 import matplotlib.pyplot as plt
 import os.path
-
-args = sys.argv
+from args import args
 
 def save_or_show(name):
-    if "-o" in args:
-        plt.savefig(os.path.join(args[args.index("-o") + 1], name))
+    if args.out_dir:
+        plt.savefig(os.path.join(args.out_dir, name))
     else:
         plt.show()
