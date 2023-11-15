@@ -26,5 +26,6 @@ arg_parser.add_argument('-n', '--hidden_layers', help='Configure hidden layers. 
 arg_parser.add_argument('-r', '--random_state', help='Random state used for reproducible results. If this argument is not passed, a random is generated', type=int, default=random.randint(0, 2**32 - 1))
 arg_parser.add_argument('-t', '--test_size', help='Value between 0 and 1 representing the rate of the dataset that will be used as the test dataset', type=float, default=0.3)
 arg_parser.add_argument('-l', '--learning_rates', help='List of learning rates that each model tested will use. Syntax: [<model_1_learning_rate>, <model_2_learning_rate>, ..., <model_n_learning_rate>]', type=is_float_list, default=[0.001, 0.01, 0.1, 0.3])
+arg_parser.add_argument('-e', '--epochs', help='Epochs', type=int, default=50)
 
 args = arg_parser.parse_args()
