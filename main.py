@@ -60,7 +60,7 @@ y = y.astype('int32')
 # 3) Dividir os dados em conjunto treinamento e teste utilizando método holdout
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=args.test_size, random_state=args.random_state)
 
-print(len(X.columns))
+# print(len(X.columns))
 
 # 4) Definir a arquitetura de rede neural artificial com Tensorflow
 # 5) Definir um otimizador
