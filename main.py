@@ -39,10 +39,9 @@ for i, row in y.iterrows():
 
 # 2) Normaliza dataset
 
-# Normalize X using maximum absolute scaling
+# Normalize X using min-max scaling
 for col in X.columns:
-    X[col] = X[col] / X[col].abs().max()
-
+    X[col] = (X[col] - X[col].min()) / (X[col].max() - X[col].min())
 
 # Normalize Y using min-max scaling
 for col in y.columns:
