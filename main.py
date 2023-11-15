@@ -2,6 +2,7 @@ import numpy as np
 from args import args # Keep this first
 from ucimlrepo import fetch_ucirepo
 import math
+import tensorflow
 from tensorflow import keras
 from keras.losses import binary_crossentropy
 from sklearn.model_selection import train_test_split
@@ -10,6 +11,7 @@ from model import build_model
 import matplotlib.pyplot as plt
 from plot import save_or_show
 
+print(tensorflow.__version__)
 keras.utils.set_random_seed(args.random_state)
 
 # 1) Load dataset and remove rows with missing vars
